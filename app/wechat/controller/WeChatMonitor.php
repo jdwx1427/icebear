@@ -27,22 +27,22 @@ class WeChatMonitor
         $callback = Request::get('callback');
         
         if(!$trace_id){
-            return json(['code'=>443,'result'=>'trace_id不能为空']);
+            return json(['ret'=>443,'msg'=>'trace_id不能为空']);
         }
         if(!$adgroup_id){
-            return json(['code'=>443,'result'=>'adgroup_id不能为空']);
+            return json(['ret'=>443,'msg'=>'adgroup_id不能为空']);
         }
         if(!$click_time){
-            return json(['code'=>443,'result'=>'click_time不能为空']);
+            return json(['ret'=>443,'msg'=>'click_time不能为空']);
         }
         if(!$qywx_corp_id){
-            return json(['code'=>443,'result'=>'qywx_corp_id不能为空']);
+            return json(['ret'=>443,'msg'=>'qywx_corp_id不能为空']);
         }
         if(!$add_channel){
-            return json(['code'=>443,'result'=>'add_channel不能为空']);
+            return json(['ret'=>443,'msg'=>'add_channel不能为空']);
         }
         if(!$callback){
-            return json(['code'=>443,'result'=>'callback不能为空']);
+            return json(['ret'=>443,'msg'=>'callback不能为空']);
         }
 
         $params = [
@@ -68,11 +68,11 @@ class WeChatMonitor
         // 保存到数据库
         $res = Db::name('wechat')->insert($params);
         if(!$res){
-            return json(['ret' => '1','msg'=>$res]);
+            return json(['ret' => 0,'msg'=>$res]);
         }
 
         // 返回响应
-        return json(['ret' => '0','msg'=>'success']);
+        return json(['ret' => 0,'msg'=>'success']);
     }
 
 
