@@ -6,7 +6,7 @@ use think\facade\Db;
 use think\facade\Log;
 use think\facade\Request;
 
-class pubMonitor
+class PubMonitor
 {
     public function click()
     {
