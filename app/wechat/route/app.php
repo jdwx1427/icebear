@@ -11,4 +11,4 @@
 use think\facade\Route;
 
 
-Route::get('click', 'WechatMonitor/click');
+Route::any('click', 'WeChatMonitor/click');

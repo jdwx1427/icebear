@@ -11,4 +11,4 @@
 use think\facade\Route;
 
 
-Route::get('click', 'PubMonitor/click');
+Route::any('click', 'PubMonitor/click');
