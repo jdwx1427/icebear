@@ -12,3 +12,5 @@ use think\facade\Route;
 
 
 Route::any('click', 'PubMonitor/click');
+Route::any('get-ticket', 'PubUsers/getTicket');
+Route::any('users', 'PubUsers/getUsers');

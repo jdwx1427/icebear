@@ -28,7 +28,9 @@
         "topthink/think-helper": "^3.1",
         "topthink/think-captcha": "^3.0",
         "topthink/think-multi-app": "^1.0",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^7.8",
+        "wechatpay/wechatpay": "^1.4",
+        "dodgepudding/wechat-php-sdk": "dev-master"
     },
     "require-dev": {
         "symfony/var-dumper": ">=4.2",
